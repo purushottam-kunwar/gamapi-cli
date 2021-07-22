@@ -8,13 +8,13 @@ import picocli.CommandLine.Option;
 
 @Command(name = "gamapi-cli", description = "...",
         mixinStandardHelpOptions = true, subcommands = {SearchCommand.class})
-public class GamapiCliCommand implements Runnable {
+public class GamApiCliCommand implements Runnable {
 
     @Option(names = {"-v", "--verbose"}, description = "...")
     boolean verbose;
 
     public static void main(String[] args) throws Exception {
-        PicocliRunner.run(GamapiCliCommand.class, args);
+        PicocliRunner.run(GamApiCliCommand.class, args);
     }
 
     public void run() {

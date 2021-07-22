@@ -8,10 +8,7 @@ import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Specification
 
-import java.io.ByteArrayOutputStream
-import java.io.PrintStream
-
-class GamapiCliCommandSpec extends Specification {
+class GamApiCliCommandSpec extends Specification {
 
     @Shared @AutoCleanup ApplicationContext ctx = ApplicationContext.run(Environment.CLI, Environment.TEST)
 
@@ -22,7 +19,7 @@ class GamapiCliCommandSpec extends Specification {
         System.setOut(new PrintStream(baos))
 
         String[] args = ["search", "-q", "merge maps", "-t", "java", "--verbose"] as String[]
-        PicocliRunner.run(GamapiCliCommand, ctx, args)
+        PicocliRunner.run(GamApiCliCommand, ctx, args)
         out.println baos.toString()
 
         // ✔ 9|3 Mergemap in groovy
