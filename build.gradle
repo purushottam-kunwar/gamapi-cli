@@ -41,6 +41,10 @@ dependencies {
         exclude group: "org.codehaus.groovy", module: "groovy-all"
     }
     testImplementation("io.micronaut.test:micronaut-test-spock")
+    implementation group: 'com.google.api-ads', name: 'dfp-axis', version: '4.14.0'
+    implementation group: 'com.google.api-ads', name: 'ads-lib', version: '4.14.0'
+
+
 }
 
 test.classpath += configurations.developmentOnly
